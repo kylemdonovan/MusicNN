@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Song Genre Classifier</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #007bff;
+        }
+        .result-container {
+            margin-top: 20px;
+        }
+        .result {
+            background-color: #e2f0ff;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="mb-4">Song Genre Classifier</h1>
+
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="file">Upload Music File:</label>
+                <input type="file" name="song" class="form-control-file mb-3" accept=".mp3, .wav">
+            </div>
+            <button type="submit" class="btn btn-primary">Upload</button>
+        </form>
+
+        <form action="/upload" method="post" class="mt-4">
+            <div class="form-group">
+                <label for="url">Or use a YouTube URL:</label>
+                <input type="text" id="url" name="url" class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Predict Genre</button>
+        </form>
+
+        {% if predicted_genre %}
+            <div class="result-container mt-4">
+                <h3 class="mb-3">Prediction Result:</h3>
+                <div class="result">
+                    <p><strong>The predicted genre of the song is:</strong></p>
+                    <p>{{ predicted_genre }}</p>
+                </div>
+            </div>
+        {% endif %}
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

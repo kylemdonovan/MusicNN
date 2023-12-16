@@ -1,0 +1,4 @@
+Add .mp3 and/or .wav files to this directory.
+These audio files will be used by the 
+content_suggestion.py program to build a 
+database for providing recommendations.

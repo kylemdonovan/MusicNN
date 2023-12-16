@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Song Genre Classifier - Results</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #007bff;
+        }
+        .result-container {
+            margin-top: 20px;
+        }
+        .result {
+            background-color: #e2f0ff;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .back-btn {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="mb-4">Song Genre Classifier</h1>
+
+        <div class="result-container mt-4">
+            <h3 class="mb-3">Prediction Result:</h3>
+            <div class="result">
+                <p><strong>The predicted genre of the song is:</strong></p>
+                <ol>
+                    {% for each_index in range(result_list | length) %}
+                        <li> {{result_list[each_index][0]}} : {{result_list[each_index][1] * 100}}%</li>
+                    {% endfor %}
+                </ol>
+            </div>
+        </div>
+
+        <a href="/" class="btn btn-primary back-btn">Back to Home</a>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
