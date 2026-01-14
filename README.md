@@ -74,5 +74,7 @@ Navigate to the extracted folder and run the following command for a demonstrati
 If you would like to create your own dataset from scratch, you can use the song details found in the model_creation/new_dataset_song_details.csv file.
 
 ## Credits
-Created by Kyle Donovan(https://github.com/kylemdonovan), Philip Hopkins(https://github.com/pdhopkins/CS467_music_NN), and Marco Scandroglio (https://github.com/marcoscandroglio)
+Created by Kyle Donovan(https://github.com/kylemdonovan), 
+Philip Hopkins(https://github.com/pdhopkins/CS467_music_NN), and 
+Marco Scandroglio (https://github.com/marcoscandroglio)
 
